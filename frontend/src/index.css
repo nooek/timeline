@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #094989d9;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(15 117 28 / 50%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(32 171 50 / 50%);
+}
+
+html, body, #root, #root > div {
+  height: 100%;
+  width: 100% !important;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  background: #bee0f7e8;
+  font-family: 'DM Sans';
+}
+
+body {
+  font-family: 'DM Sans';
+  font: inherit;
+}
