@@ -76,3 +76,11 @@ export const CloseButton = styled.button`
         width: 95%;
     }
 `
+
+export const Date = styled.h1`
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    font-family: 'DM Sans';
+    margin-top: 25px;
+`

@@ -14,6 +14,7 @@ import Memories from "./Memories/Memories";
 import Name from "./Name/Name";
 import Description from "./Description/Description";
 import { useUserData } from "../../store/userContext";
+import formatDateNumber from "../../utils/formatSingleNumberDate";
 
 const MemoryForm = ({ setMemoryForm, date, memories, setMemories }) => {
   const [memoryInfo, setMemoryInfo] = useState({
@@ -86,7 +87,7 @@ const MemoryForm = ({ setMemoryForm, date, memories, setMemories }) => {
         date.year + "-" + date.month + "-" + date.choosenDay
       ).toLocaleDateString("sv"),
       owner: user.email,
-      time: d.getHours() + ":" + d.getMinutes(),
+      time: formatDateNumber(d.getHours()) + ":" + formatDateNumber(d.getMinutes()),
     };
     axios
       .post("http://localhost:8080/memory", memoryObject)
